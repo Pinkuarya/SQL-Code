@@ -1,0 +1,38 @@
+SELECT * FROM DEPARTMENT
+SELECT * FROM EMPLOYEE
+
+-----------------------------------------
+INSERT INTO EMPLOYEE VALUES 
+(104, 'KEERTI', '2016-11-27', 28000, 'PURI'),
+(105, 'SHRUTI', '2013-08-15', 22000, 'HYDERABAD')
+
+INSERT INTO DEPARTMENT VALUES (10, 'HR', 'PUNE',103),
+
+---------------------------------------------
+
+SELECT * FROM EMPLOYEE
+WHERE CITY = 'GWALIOR'
+
+SELECT * FROM EMPLOYEE
+WHERE EMP_ID = 104
+
+SELECT * FROM EMPLOYEE
+WHERE EMP_ID <> 103
+
+SELECT * FROM EMPLOYEE
+WHERE SALARY >= 30000
+
+-------------------------------------------------------
+BETWEEN, NOT BETWEEN, LIKE, IN, <>, =<, =>
+-------------------------------------------------------
+
+SELECT * FROM EMPLOYEE
+WHERE SALARY BETWEEN 20000 AND 25000
+
+SELECT * FROM EMPLOYEE
+WHERE EMP_NAME LIKE 'P%'
+
+SELECT * FROM EMPLOYEE
+WHERE CITY LIKE 'G%'
+
+

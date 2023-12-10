@@ -1,0 +1,37 @@
+CREATE DATABASE TRAINING_DATABASE;
+
+--------------------------------------------
+USE TRAINING_DATABASE
+---------------------------------------------
+
+------------------------------------------
+CREATE TABLE EMPLOYEE  /* PARENT TABLE*/
+(
+EMP_ID INT PRIMARY KEY,
+EMP_NAME CHAR(255),
+DOJ DATE,
+SALARY MONEY,
+CITY VARCHAR(255)    /*ALPHANEUMERIC*/
+)
+
+-------------------------------------------
+
+CREATE TABLE DEPARTMENT  /*CHILD TABLE*/
+(
+DEPT_ID VARCHAR PRIMARY KEY,
+DEPT_NAME VARCHAR(100),
+DEPT_LOCATION CHAR(50),
+EMP_ID INT FOREIGN KEY REFERENCES EMPLOYEE (EMP_ID)
+);
+
+/*DQL/DML*/--------------------------------------------
+
+SELECT * FROM EMPLOYEE   -- HANDY QUERY
+
+INSERT INTO EMPLOYEE VALUES (101, 'PREETI', '2019-02-23', 30000, 'GWALIOR')
+INSERT INTO EMPLOYEE VALUES (102, 'MADHU', '2019-02-24', 25000, 'DELHI');
+-------------------------------------------------------
+
+SELECT * FROM DEPARTMENT
+SELECT DEPT_ID, DEPT_NAME FROM DEPARTMENT
+INSERT INTO DEPARTMENT VALUES ('012IT345', 'IT', 'IT PARK', 101)
